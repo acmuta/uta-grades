@@ -43,7 +43,7 @@ interface SideBarProps {
             </label>
             <select
               id="year"
-              value={selectedYear || ""}
+              value={selectedYear || "First_Selection"}
               onChange={(e) => setSelectedYear(e.target.value)}
               className="border p-2 rounded-lg w-full"
             >
@@ -65,7 +65,7 @@ interface SideBarProps {
             </label>
             <select
               id="semester"
-              value={selectedSemester || ""}
+              value={selectedSemester || "First_Selection"}
               onChange={(e) => setSelectedSemester(e.target.value)}
               className="border p-2 rounded-lg w-full"
             >

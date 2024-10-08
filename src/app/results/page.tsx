@@ -59,8 +59,11 @@ const ResultsPage = () => {
     ? courses.filter(course => course.instructor1 === selectedProfessor)
     : [];
   const years = [...new Set(filteredCourses.map(course => course.year))];
+  years.sort();
+  years.reverse();
+  const semesterOrder = ['Spring', 'Summer', 'Fall'];
   const semesters = [...new Set(filteredCourses.map(course => course.semester))];
-
+  semesters.sort((a, b) => semesterOrder.indexOf(a) - semesterOrder.indexOf(b));
   const finalFilteredCourses = filteredCourses.filter(course => {
     const matchesYear = selectedYear ? course.year === selectedYear : true;
     const matchesSemester = selectedSemester ? course.semester === selectedSemester : true;
