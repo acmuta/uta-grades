@@ -135,12 +135,10 @@ const SideBar: React.FC<SideBarProps> = ({
                             ))}
                         </ul>
                     )}
-
-                    <button
+                    <button 
                         onClick={handleBackButtonClick}
-                        className="mt-4 text-blue-500 underline"
-                    >
-                        Back
+                        className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l">
+                        Back To Professors
                     </button>
                 </div>
             ) : routeType === "course" ? (
